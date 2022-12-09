@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    /* height: 100vh;
+    width: 100%;
+    display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;    
+}
+
+
+
+.container{
+    height: 400px;
+    width: 600px;
+}
+
+
+.card-body{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+}
+
+
+.front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:url('images/img1.jpg') no-repeat center center/ cover;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    /* animation: vid 20s infinite alternate;    */
+    /* background-position: left;
+    background-size: 400%; */
+    /* animation: ani 10s infinite alternate; */
+    color: rgb(255, 255, 255);
+    
+}
+
+/* @keyframes ani{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+} */
+
+/* @keyframes vid{
+    10%{
+        background:url('images/two.svg') no-repeat center center/ cover;
+    }
+    20%{
+        background:url('images/three.svg') no-repeat center center/ cover;
+    }
+    30%{
+        background:url('images/four.svg') no-repeat center center/ cover;
+    }
+    40%{
+        background:url('images/five.svg') no-repeat center center/ cover;
+    }
+    50%{
+        background:url('images/six.svg') no-repeat center center/ cover;
+    }
+    60%{
+        background:url('images/seven.svg') no-repeat center center/ cover;
+    }
+    70%{
+        background:url('images/eight.svg') no-repeat center center/ cover;
+    }
+    80%{
+        background:url('images/nine.svg') no-repeat center center/ cover;
+    }
+    90%{
+        background:url('images/ten.svg') no-repeat center center/ cover;
+    }
+    100%{
+        background:url('images/eleven.svg') no-repeat center center/ cover;
+    }
+} */
+
+h2{
+    position: relative;
+    bottom:-70%;
+    left: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 2rem; 
+    letter-spacing: 10px;
+}
+
+h2 span{
+    font-size: 1rem;
+    position: absolute;
+}
+
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    transform: perspective(1000px) rotateY(180deg);
+    background: url('images/img1.jpg');
+    background-position: left;
+    background-size: 400%;
+    animation: maz 10s infinite alternate;
+    overflow: hidden;
+    
+}
+
+@keyframes maz{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.card-body:hover{
+    transform: perspective(1000px)  rotateY(180deg);
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+    transform: rotate(45deg);
+    background-color: black;
+    top: -25%;
+    position: absolute;
+}
+
+h3{
+    font-size: 3rem;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* .image::after{
+    content: 'Profile';
+    position: relative;
+    top: 110%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    left: 25%;
+
+} */
